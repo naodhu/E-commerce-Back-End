@@ -3,6 +3,9 @@ const routes = require('./routes');
 // import sequelize connection
 const Sequelize = require('sequelize');
 
+
+
+
 // create a new Sequelize instance
 const sequelize = new Sequelize(
   process.env.DB_NAME,
@@ -19,7 +22,7 @@ module.exports = sequelize;
 
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3006;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

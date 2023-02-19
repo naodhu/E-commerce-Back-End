@@ -16,7 +16,7 @@ ProductTag.init(
     product_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'products',
+        model: 'product',
         key: 'id'
       }
     },
@@ -36,5 +36,17 @@ ProductTag.init(
     modelName: 'product_tag',
   }
 );
+
+
+
+
+
+
+ProductTag.sync().then(() => {
+  console.log('ProductTag model synchronized with database');
+}).catch((error) => {
+  console.error('Error synchronizing ProductTag model:', error);
+});
+
 
 module.exports = ProductTag;

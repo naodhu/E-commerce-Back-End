@@ -3,14 +3,30 @@ const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
 
-router.get('/', (req, res) => {
-  
-});
-
-router.get('/:id', (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const categoryData = await Category.findAll({
-      include: [{ model: Product }],
+      include: {
+        model: Product,
+        attributes: [`id`, `product_name`, `price`, `stock`, `category_id`],
+      }
+    });
+    return res.status(200).json(categoryData);
+  }
+  catch(err){
+    res.status(404).json(err)
+  }
+});
+
+
+
+router.get('/:id', async (req, res) => {
+  try {
+    const categoryData = await Category.findAll({
+      include: {
+        model: Product,
+        attributes: [`id`, `product_name`, `price`, `stock`, `category_id`],
+      }
     });
     res.status(200).json(categoryData);
   } catch (err) {
@@ -18,7 +34,7 @@ router.get('/:id', (req, res) => {
   }
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const categoryData = await Category.findByPk(req.params.id, {
       include: [{ model: Product }],
@@ -44,7 +60,7 @@ router.put('/:id', (req, res) => {
   })
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const categoryData = await Category.destroy({
       where: { id: req.params.id },
@@ -53,7 +69,7 @@ router.delete('/:id', (req, res) => {
       res.status(404).json({ message: 'No category found with that id!' });
       return;
     }
-    res.status(200).json(categoryData);
+    res.status(200).json('A category has been removed from the database ', categoryData);
   } catch (err) {
     res.status(500).json(err);
   }

@@ -39,9 +39,36 @@ The application uses Sequelize, an ORM that allows developers to interact with r
 * Implementing user authentication and authorization.
 
 
-## Screenshots
+## ScreenShots and Demos 
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+### Seeding and running server.js
+
+https://user-images.githubusercontent.com/113915529/220003439-084e3f9b-96da-43be-9fad-61144707d44a.mov
+
+
+
+
+### The first animation shows GET routes to return all categories, all products, and all tags being tested in Insomnia Core:
+
+ https://user-images.githubusercontent.com/113915529/220005389-ed48df15-b34d-4565-bd70-20d472924692.mov
+
+
+
+### The second animation shows GET routes to return a single category, a single product, and a single tag being tested in Insomnia Core:
+
+https://user-images.githubusercontent.com/113915529/220005405-79a47f9d-da4a-462b-a574-605ad3077073.mov
+
+
+
+
+
+
+### The final animation shows the POST, PUT, and DELETE routes for categories being tested in Insomnia Core:
+
+https://user-images.githubusercontent.com/113915529/220005416-d1167f53-53ce-4954-b2f5-f1ee8a3161c8.mov
+
+
+
 
 
 ## Demo
@@ -54,3 +81,11 @@ Insert gif or link to demo
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
 
+
+## Badges
+
+
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)

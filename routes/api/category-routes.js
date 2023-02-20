@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
   try {
-    const categoryData = await Category.findAll({
+    const categoryData = await Category.findByPk(req.params.id, {
       include: {
         model: Product,
         attributes: [`id`, `product_name`, `price`, `stock`, `category_id`],
@@ -36,9 +36,8 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    const categoryData = await Category.findByPk(req.params.id, {
-      include: [{ model: Product }],
-    });
+    const categoryData = await Category.create(req.body);
+    return res.status(200).json(categoryData);
     if (!categoryData) {
       res.status(404).json({ message: 'No category found with that id!' });
       return;
@@ -49,27 +48,33 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.put('/:id', (req, res) => {
-  router.post('/', async (req, res) => {
+router.put('/:id', async (req, res) => {
+  // router.post('/', async (req, res) => {
     try {
-      const categoryData = await Category.create(req.body);
+      const categoryData = await Category.update(req.body, {
+        where: {
+          id:req.params.id,
+        },
+        individualHooks: true
+      });
       res.status(200).json(categoryData);
     } catch (err) {
       res.status(400).json(err);
     }
-  })
-});
+  });
 
 router.delete('/:id', async (req, res) => {
   try {
     const categoryData = await Category.destroy({
       where: { id: req.params.id },
     });
-    if (!categoryData) {
-      res.status(404).json({ message: 'No category found with that id!' });
-      return;
-    }
-    res.status(200).json('A category has been removed from the database ', categoryData);
+    res.status(200).json(categoryData);
+
+    // // if (!categoryData) {
+    // //   res.status(404).json({ message: 'No category found with that id!' });
+    // //   return;
+    // // }
+    // res.status(200).json({ message: 'Successfully deleted the category', category: categoryToDelete });
   } catch (err) {
     res.status(500).json(err);
   }

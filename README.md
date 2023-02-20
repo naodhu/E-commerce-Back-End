@@ -78,10 +78,15 @@ Insert gif or link to demo
 ## Acknowledgments :
 
 [Node.js](https://nodejs.org/)
+
 [Express.js](https://expressjs.com/)
+
 [MySQL](https://www.mysql.com/)
+
 [mysql2](https://www.npmjs.com/package/mysql2)
+
 [Sequelize](https://sequelize.org/)
+
 [dotenv](https://www.npmjs.com/package/dotenv)
 
 
@@ -98,8 +103,8 @@ dotenv
 
 
 ## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)]()
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/naod-hunde/)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
 
 

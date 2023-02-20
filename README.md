@@ -75,6 +75,27 @@ https://user-images.githubusercontent.com/113915529/220005416-d1167f53-53ce-4954
 
 Insert gif or link to demo
 
+## Acknowledgments :
+
+[Node.js](https://nodejs.org/)
+[Express.js](https://expressjs.com/)
+[MySQL](https://www.mysql.com/)
+[mysql2](https://www.npmjs.com/package/mysql2)
+[Sequelize](https://sequelize.org/)
+[dotenv](https://www.npmjs.com/package/dotenv)
+
+
+
+## Tech Stack:
+
+Node.js
+Express.js
+MySQL
+mysql2
+Sequelize
+dotenv
+
+
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)

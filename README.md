@@ -73,7 +73,7 @@ https://user-images.githubusercontent.com/113915529/220005416-d1167f53-53ce-4954
 
 ## Demo
 
-Insert gif or link to demo
+ [link to demo](https://drive.google.com/file/d/1WJxnROaGfKP7tF6otevLlIxEs9yR2t7x/view?usp=sharing)
 
 ## Acknowledgments :
 
